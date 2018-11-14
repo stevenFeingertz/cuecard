@@ -12,7 +12,13 @@ var app = express();
 app.set('view engine', 'hbs');
 
 
-
+// ROUTES
+app.get('/',(request, response) => {
+	response.render('home.hbs', {
+		pageTitle: 'Home Page',
+		welcomeMessage: 'Welcome to our website!'
+	});
+});
 
 
 
