@@ -14,6 +14,11 @@ const port = process.env.PORT;
 // EXPRESS MIDDLEWARE
 app.use(bodyParser.json());
 
+
+
+
+
+
 // START SERVER ON PORT ??
 app.listen(port, () => {
 	console.log(`Server is up on port ${port}.`);
