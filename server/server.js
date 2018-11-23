@@ -9,9 +9,6 @@ const {connection} = require('./db/mysql.js');
 // SETUP EXPRESS
 var app = express();
 
-// SET APP PORT
-const port = process.env.PORT;
-
 // EXPRESS MIDDLEWARE
 app.use(bodyParser.json());
 
@@ -60,5 +57,5 @@ app.get('/test', (req, res) => {
 
 // START SERVER
 app.listen(process.env.PORT, () => {
-	console.log(`Server is up on port ${port}.`);
+	console.log(`Server is up on port ${process.env.PORT}.`);
 });
