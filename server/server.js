@@ -4,22 +4,61 @@ require('./config/config.js');
 // IMPORT
 const express = require('express');
 const bodyParser = require('body-parser');
+const {connection} = require('./db/mysql.js');
 
 // SETUP EXPRESS
 var app = express();
 
-// HEROKU PORT VAR
+// SET APP PORT
 const port = process.env.PORT;
 
 // EXPRESS MIDDLEWARE
 app.use(bodyParser.json());
 
+// ROUTES (TEMP)
+app.get('/test', (req, res) => {
+
+	connection.connect();
+
+	connection.query({
+	  sql: 'SELECT * FROM `testing` WHERE `price` = ? and `id` = ?',
+	  timeout: 40000, // 40s
+	  values: [1.99, 14]
+	}, function (error, results, fields) {
+
+		res.send(results);
+
+	  // error will be an Error if one occurred during the query
+	  // results will contain the results of the query
+	  // fields will contain information about the returned results fields (if any)
+	});
+
+	// close db connection
+	connection.end();
 
 
 
 
 
-// START SERVER ON PORT ??
-app.listen(port, () => {
+	// Todo.find().then((todos) => {
+	// 	res.send({todos});
+	// }).catch((e) => {
+	// 	res.status(400).send();
+	// });
+
+
+
+
+});
+
+
+
+
+
+
+
+
+// START SERVER
+app.listen(process.env.PORT, () => {
 	console.log(`Server is up on port ${port}.`);
 });
