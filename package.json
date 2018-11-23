@@ -10,8 +10,6 @@
   "author": "Steven Feingertz",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "handlebars": "^4.0.12",
-    "hbs": "^4.0.1"
+    "express": "^4.16.4"
   }
 }
