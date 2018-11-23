@@ -2,14 +2,15 @@
   "name": "app",
   "version": "1.0.0",
   "description": "cuecard.io is a new way to create and deploy timeline, itinerary and schedules",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "author": "Steven Feingertz",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4"
   }
 }
