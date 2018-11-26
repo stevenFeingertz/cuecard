@@ -18,9 +18,9 @@ app.get('/test', (req, res) => {
 	connection.connect();
 
 	connection.query({
-	  sql: 'SELECT * FROM `testing` WHERE `price` = ? and `id` = ?',
+	  sql: 'SELECT * FROM `account` WHERE `ownerID` = ? and `id` = ?',
 	  timeout: 40000, // 40s
-	  values: [1.99, 14]
+	  values: [2, 14]
 	}, function (error, results, fields) {
 
 		res.send(results);
