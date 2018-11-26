@@ -13,16 +13,15 @@ Account
         1 is the acct owner
         Name
         Email
+        Password
         Phone (SMS)
-        Address
-        etc...
     - Stacks
-        Social Posts when played
-        Start Date/Time
+        Start Date/Time ??
         Shared {id's of users}
         Name
         Theme {school, modern, education, etc.}
         - Cue Card
+            Social Posts when played
             Location (with maps)
             Reminders
                 n number

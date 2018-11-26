@@ -4,7 +4,7 @@ var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '&d7&wXK#QKzB',
-  database : 'test',
+  database : 'cuecard.io',
   port     : 3306
 });
 
