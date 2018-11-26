@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+const fs = require('fs');
 
 var connection = mysql.createConnection({
   host     : process.env.DATABASE_HOST,
