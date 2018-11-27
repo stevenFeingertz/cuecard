@@ -2,16 +2,14 @@ const mysql = require('mysql');
 const fs = require('fs');
 
 var connection = mysql.createConnection({
-  host     : process.env.DATABASE_HOST,
-  user     : process.env.DATABASE_USERNAME,
-  password : process.env.DATABASE_PASSWORD,
-  database : process.env.DATABASE_NAME,
+  host     : process.env.JAWSDB_HOST,
+  user     : process.env.JAWSDB_USER,
+  password : process.env.JAWSDB_PASSWORD,
+  database : process.env.JAWSDB_DATABASE,
   port     : 3306,
   timezone : 'Z',
   ssl      : {
-        ca      : fs.readFileSync(__dirname + '/ssl/cleardb-ca.pem'),
-        cert    : fs.readFileSync(__dirname + '/ssl/be81114c16f5d7-cert.pem'),
-        key     : fs.readFileSync(__dirname + '/ssl/cleardb_id-key-no-password.pem')
+        ca      : fs.readFileSync(__dirname + '/ssl/rds-combined-ca-bundle.pem')
   }
 });
 
