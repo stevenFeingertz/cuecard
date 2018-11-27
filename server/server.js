@@ -13,6 +13,12 @@ var app = express();
 app.use(bodyParser.json());
 
 // ROUTES (TEMP)
+app.get('/', (req, res) => {
+
+	res.send('default route');
+
+});
+
 app.get('/test', (req, res) => {
 
 	connection.query({
@@ -23,7 +29,7 @@ app.get('/test', (req, res) => {
 
 		if (error) throw error;
 
-		res.send(results);
+		res.json(results);
 
 	  // error will be an Error if one occurred during the query
 	  // results will contain the results of the query
