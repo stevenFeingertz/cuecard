@@ -24,7 +24,7 @@ app.get('/test', (req, res) => {
 	}, function (error, results, fields) {
 
 		if (error) {
-			return res.send(error);
+			return res.send(error); 
 		}
 
 		res.send(results);
