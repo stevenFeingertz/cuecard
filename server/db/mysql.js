@@ -6,11 +6,10 @@ var connection = mysql.createConnection({
   user     : process.env.DATABASE_USERNAME,
   password : process.env.DATABASE_PASSWORD,
   database : process.env.DATABASE_NAME,
-  port     : 3306,
-  timezone : 'Z',
-  ssl      : {
-        ca      : fs.readFileSync(__dirname + '/ssl/rds-combined-ca-bundle.pem')
-  }
+  port     : 3306
+  // ssl      : {
+  //       ca      : fs.readFileSync(__dirname + '/ssl/rds-combined-ca-bundle.pem')
+  // }
 });
 
 module.exports = {
