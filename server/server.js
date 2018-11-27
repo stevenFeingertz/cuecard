@@ -20,7 +20,7 @@ app.get('/test', (req, res) => {
 	connection.query({
 	  sql: 'SELECT * FROM `account` WHERE `ownerID` = ? and `id` = ?',
 	  timeout: 40000, // 40s
-	  values: [2, 14]
+	  values: [22, 14]
 	}, function (error, results, fields) {
 
 		if (error) {
