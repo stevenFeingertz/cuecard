@@ -23,9 +23,11 @@ app.get('/test', (req, res) => {
 	  values: [2, 14]
 	}, function (error, results, fields) {
 
+		if (error) {
+			return res.send(error);
+		}
+
 		res.send(results);
-
-
 
 	  // error will be an Error if one occurred during the query
 	  // results will contain the results of the query

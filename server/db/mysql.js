@@ -7,10 +7,11 @@ var connection = mysql.createConnection({
   password : process.env.DATABASE_PASSWORD,
   database : process.env.DATABASE_NAME,
   port     : 3306,
-  ssl  : {
-    ca      : fs.readFileSync(__dirname + '/ssl/cleardb-ca.pem'),
-    cert    : fs.readFileSync(__dirname + '/ssl/be81114c16f5d7-cert.pem'),
-    key    : fs.readFileSync(__dirname + '/ssl/cleardb_id-key-no-password.pem')
+  timezone : 'Z',
+  ssl      : {
+        ca      : fs.readFileSync(__dirname + '/ssl/cleardb-ca.pem'),
+        cert    : fs.readFileSync(__dirname + '/ssl/be81114c16f5d7-cert.pem'),
+        key     : fs.readFileSync(__dirname + '/ssl/cleardb_id-key-no-password.pem')
   }
 });
 
