@@ -1,5 +1,6 @@
 // ENV SETUP
-require('./config/config.js');
+require('dotenv').config();
+// require('./config/config.js');
 
 // IMPORT
 const express = require('express');
