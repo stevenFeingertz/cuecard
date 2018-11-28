@@ -1,6 +1,5 @@
-// ENV SETUP
+// ENV VARS
 require('dotenv').config();
-// require('./config/config.js');
 
 // IMPORT
 const express = require('express');
@@ -15,9 +14,7 @@ app.use(bodyParser.json());
 
 // ROUTES (TEMP)
 app.get('/', (req, res) => {
-
-	res.send('default route');
-
+	res.status(400).send();
 });
 
 app.get('/test', (req, res) => {
